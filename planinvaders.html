@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <meta content="utf-8" http-equiv="encoding"/>
+
+    <!--- Facebook Open Graph properties: --->
+    <meta property="og:type" content="game"/>
+    <meta property="og:url" content="https://plan-invaders.strd.co/"/>
+    <meta property="og:site_name" content="Plan Invaders - be the performance tuner you always wanted to be!"/>
+    <meta property="og:image" content="https://plan-invaders.strd.co/screenshot.png"/>
+    <meta property="og:title" content="Plan Invaders"/>
+    <meta property="og:description" content="Be the SQL Server performance tuner you always wanted to be!"/>
+
+    <meta name=”twitter:title” content="Plan Invaders" />
+    <meta name=”twitter:description” content=”This Breakout clone lets you be the SQL Server performance tuner you always wanted to be!” />
+    <meta name=”twitter:url” content=”https://plan-invaders.strd.co/” />
+    <meta name=”twitter:image” content=”https://plan-invaders.strd.co/screenshot.png” />
+
+    <link rel="shortcut icon" href="/favicon.png" type="image/png">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./plan-invaders.css"/>
+
+    <script src="./plan-invaders.js"></script>
+
+    <title>Plan Invaders - Be the performance tuner you always wanted to be!</title>
+
+</head>
+<body onclick="init();">
+
+<!--- Image credit: https://www.sentryone.com/blog/aaronbertrand/features-fixes-sentryone-plan-explorer-19-0 --->
+    <img id="bitmap" src="./plan-explorer-logos.png" style="display: none;"/>
+
+    <div id="notification" class="notification">This game requires the use of a mouse, so it probably won't work on a mobile device.</div>
+
+    <div class="score" id="score">Score: 0%</div>
+
+    <div id="armada" class="armada"></div>
+
+    <div id="theball" class="ball-origin">
+        <div id="ballpath" class="ball-path"></div>
+        <div id="actualball" class="ball"></div>
+    </div>
+
+    <div id="paddle" class="paddle"></div>
+
+    <div id="meme" class="meme" onclick="init();"></div>
+
+    <div class="credits">
+        With love from <a href="https://strd.co" target="_new" onclick="event.stopPropagation();">Structured Concepts</a>. Copyright &copy;2019. All rights reserved.<br/>
+        The beautiful query plan icons appear courtesy of <a href="https://www.sentryone.com/plan-explorer" target="_new" onclick="event.stopPropagation();">SentryOne Plan Explorer</a>.<br/>
+        Version 0.1.6<br/>
+    </div>
+
+    <div class="panel">
+        <label onclick="event.stopPropagation();"><input type="checkbox" id="chkToggleNames" onclick="toggleNames();"/> Display operator names</label>
+        <label onclick="event.stopPropagation();"><input type="checkbox" id="chkToggleTrack" onclick="toggleTrack();"/> Display ball trajectory</label>
+    </div>
+
+</body>
+</html>
